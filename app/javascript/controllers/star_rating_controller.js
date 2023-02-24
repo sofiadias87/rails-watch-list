@@ -1,8 +1,7 @@
-import { Controller } from "@hotwired/stimulus"
-import StarRating from "star-rating.js"
+import { application } from "./application"
 
-export default class extends Controller {
-  connect() {
-    new StarRating(this.element)
-  }
-}
+import TomSelectController from "./tom_select_controller.js"
+application.register("tom-select", TomSelectController)
+
+import StarRatingController from "./star_rating_controller.js"
+application.register("star-rating", StarRatingController)
